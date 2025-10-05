@@ -29,7 +29,7 @@
 
             const token = localStorage.getItem("token");
 
-            let response = await fetch(`https://bookreview3-backend.onrender.com/api/books/review/${book._id}`, {
+            let response = await fetch(`http://localhost:5000/api/books/review/${book._id}`, {
                 method:"POST",
                 headers: {
                     "Content-Type": "application/json",
