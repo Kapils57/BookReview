@@ -37,8 +37,5 @@ import bookRouter from './routes/books.routes.js'
 app.use("/api/users", userRouter);
 
 app.use("/api/books", bookRouter);
-app.use(express.static(path.join(process.cwd(), "dist")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "dist", "index.html"));
-});
+
 export default app;
