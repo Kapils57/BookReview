@@ -34,7 +34,7 @@ function Register() {
 
 
 
-        let response = await fetch("https://bookreview3-backend.onrender.com/api/users/register", {
+        let response = await fetch("http://localhost:5000/api/users/register", {
             method:"POST",
             body: formData
         })
