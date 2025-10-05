@@ -52,12 +52,12 @@ function Registerbooks() {
         
 
         const token = localStorage.getItem("token");
-        let url = "https://bookreview3-backend.onrender.com/api/books/registerbooks";
+        let url = "http://localhost:5000/api/books/registerbooks";
         let method = "POST";
 
         if (existingBook) {
             // Editing an existing book
-            url = `https://bookreview3-backend.onrender.com/api/books/updatemybooks/${existingBook._id}`;
+            url = `http://localhost:5000/api/books/updatemybooks/${existingBook._id}`;
             method = "PUT";
         }
 
