@@ -1,0 +1,108 @@
+.register{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    /* background-color: aliceblue; */
+    
+}
+.abc{
+    /* border: 1px solid white; */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 60px;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.15);
+    
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px); 
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+}
+.objects{
+    display: flex;
+   
+    align-items: center;
+    margin: 15px 0;
+    
+}
+.objects label{
+    width: 120px;
+    font-weight: 500; 
+    
+}
+.objects input {
+    width: 250px;   
+    padding: 5px;
+  
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    outline: none;
+    
+    
+}
+
+
+.objects input:focus {
+    border-color: #6a82fb;
+    box-shadow: 0 0 20px rgba(106, 130, 251, 0.6);
+}
+/* 
+.input-error {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.6);
+} */
+.input-error {
+    border-color: #ff6b6b; 
+    box-shadow: 0 0 20px rgba(255, 4, 4, 0.6);
+}
+
+.btn{
+    
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    margin-top: 25px;
+    
+    
+}
+.btn input{
+    
+    width: 110px;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn input:hover {
+    transform: scale(1.04);  /* expands smoothly */
+    box-shadow: 0px 8px 20px rgba(106, 130, 251, 0.6);
+}
+
+.err-message {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    font-weight: 500;
+    font-family: "Segoe UI", sans-serif;
+    transition: opacity 0.3s ease-in-out;
+    
+}
+
+/* Optional: smooth fade-in for errors */
+.error-message.show {
+    opacity: 1;
+}
+.error-message.hide {
+    opacity: 0;
+}
