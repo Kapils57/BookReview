@@ -12,7 +12,7 @@
         useEffect(() => {
             const loadBooks = async () => {
             try {
-                const response = await fetch("https://bookreview3-backend.onrender.com/api/books/getbooks", {
+                const response = await fetch("http://localhost:5000/api/books/getbooks", {
                     method: "GET",
                 });
 
@@ -41,7 +41,7 @@
 
             setLoading(true)
             try {
-                const response = await fetch(`https://bookreview3-backend.onrender.com/api/books/getbooks/search?query=${encodeURIComponent(searchquery)}`);
+                const response = await fetch(`http://localhost:5000/api/books/getbooks/search?query=${encodeURIComponent(searchquery)}`);
                 const data = await response.json();
                 // console.log(data.data);
                 setBooks(data.data);             // ✅ set the search results in state
