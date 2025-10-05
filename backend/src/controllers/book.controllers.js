@@ -1,6 +1,6 @@
 import dotenv from "dotenv"
 import asyncHandler from '../utils/asyncHandler.js'
-import ApiError from '../utils/APIerror.js';
+import ApiError from '../utils/ApiError.js';
 import ApiResponse from '../utils/ApiResponse.js';
 import {Book} from '../models/books.model.js'
 import UploadonCloudinary from '../utils/cloudinary.js';
