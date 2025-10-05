@@ -6,7 +6,7 @@ function Navbar({ IsLoggedIn, setIsLoggedIn }) {
   async function handleLogout(){
     const token = localStorage.getItem("token"); 
     try {
-      await fetch("http://localhost:5000/api/users/logout", {
+      await fetch("https://bookreview3-backend.onrender.com/api/users/logout", {
         method: "POST",
         headers: { "Authorization": `Bearer ${token}` }
       });
