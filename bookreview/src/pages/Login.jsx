@@ -6,38 +6,17 @@ function Login({setIsLoggedIn}) {
     const {
         register,
         handleSubmit,
-        setFocus,
-        watch,
-        formState: {errors, isSubmitting},
+        formState: {isSubmitting},
     }=useForm({mode: 'onSubmit'});
     const navigate = useNavigate();
     // localStorage.removeItem('token');
     const onSubmit =async (data) => {
-
-        
-
-        // console.log(data);
-        // if (data.fullname.length < 3) {
-      
-        // setFocus("fullname"); 
-        // return;
-        // }
-
-        const formData = new FormData();
-        
-        
-        formData.append("email", data.email);
-        formData.append("password", data.password);
-        
-
-
-
         let response = await fetch("http://localhost:5000/api/users/login", {
             method:"POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              email: formData.get("email"),      // or get values from your React state/form
-              password: formData.get("password")
+              email: data.email,
+              password: data.password
             })
         })
         const result = await response.json();
